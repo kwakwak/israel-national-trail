@@ -6,6 +6,15 @@ angular.module('myApp.controllers', [])
    .controller('HomeCtrl', ['$scope', 'syncData','$routeParams','$log','$location', function($scope, syncData,$routeParams,$log,$location) {
 
         $scope.sections = syncData('israel-national-trail');
+        $scope.sections.$on('loaded', function()
+        {
+          $log.info("Loaded");
+          $scope.$watch('filteredSection', function(body) {
+            if (body) {
+              $scope.previewText = body;
+            }
+          });
+        });
 
  
    }])

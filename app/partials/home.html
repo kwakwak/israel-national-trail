@@ -1,9 +1,10 @@
 
 		<span style="font-size: 50px;font-weight: bold;">שביל ישראל</span>
 		<input style="width: 250px;" ng-model="search" class="form-control" placeholder="משתמשים,סטטיסטיקות,מרחקים,אחוזים">
+		<pre>{{previewText}}</pre>
 		<hr>
 
-		<div class="panel panel-default" ng-repeat="section in sections | clean | filter:search">
+		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | filter:search))">
 		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>
 		  <div class="panel-body">
 			במקטע השתתפו <b>{{section.participants}}</b> והלכו {{section.length}} ק"מ
