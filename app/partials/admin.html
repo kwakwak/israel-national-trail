@@ -1,0 +1,31 @@
+Hello {{user.name}}!
+<h2>Add Event</h2>
+
+<form>
+  <input placeholder="Title.." ng-model="event.title">
+  <input placeholder="Details.." ng-model="event.details">
+  <select ng-model="event.type_selected" ng-options="type for type in event.types" required><option value="">Choose Event Type..</option></select>
+    <br/>
+  <input placeholder="Place.." ng-model="event.place" ng-show="event.type_selected=='Show'">
+    <input type="date" placeholder="Date.." ng-model="event.date" >
+
+
+  <button type="submit" ng-click="addEvent()" ng-hide="showSave">Add new</button>
+  <button type="submit" ng-click="save()" ng-show="showSave">Save Changes</button>
+</form>
+<hr>
+<h3>Events</h3>
+<ul id="events" ng-show="eventsOnServer">
+        <li ng-click="showEvent=1-showEvent" style="cursor: pointer;" ng-repeat-start="(date, events) in eventsOnServer "> {{date}}</li>
+            <div  ng-repeat-end ng-show="showEvent" ng-repeat="(event_id, event) in events ">
+                <b style="color:indianred;">Title</b> {{event.title}}
+                <b style="color:indianred;">Details</b> {{event.details}}
+                <b style="color:indianred;">Type</b> {{event.type_selected}}
+                <b style="color:indianred;">Place</b> {{event.place}}
+                |
+                <b style="cursor: pointer; color:blueviolet;" ng-click="editEvent(event_id,'del',date)">Delete</b> |
+                <b style="cursor: pointer; color:blueviolet;" ng-click="editEvent(event_id,'edit',date)">Edit</b>
+</div></li>
+
+</ul>
+
