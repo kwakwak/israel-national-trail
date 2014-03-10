@@ -1,17 +1,18 @@
-<div id="rightPanel" class="pull-right full-height">
-    <div id="control">
-        <button type="button" class="btn btn-default glyphicon glyphicon glyphicon-chevron-left" ng-disabled="hidePrev" ng-click="goTo('prev')" ></button>
-        <button type="button" class="btn btn-default glyphicon glyphicon glyphicon-chevron-right pull-right" ng-disabled="hideNext" ng-click="goTo('next')"></button>
-    </div>
-    <p class="title" ng-repeat-start="(date, events) in allEvents | orderByPriority | reverse"
-       ng-class="{red: red(events.$id)}">{{events.$id }}   </p>
-    <p class="event" ng-repeat-end  ng-repeat="(event_id, event) in events ">{{event.title}}</p>
-</div>
-<div id="header">{{date}}</div>
 
-<div id="main" class="full-height" ng-repeat="event in eventsInDate | orderByPriority | limitTo: 1">
-    <h2>{{event.title}}</h2>
-    {{event.details}}
+		<span style="font-size: 50px;font-weight: bold;">שביל ישראל</span>
+		<input style="width: 250px;" ng-model="search" class="form-control" placeholder="משתמשים,סטטיסטיקות,מרחקים,אחוזים">
+		<hr>
 
-
+		<div class="panel panel-default" ng-repeat="section in sections | clean | filter:search">
+		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>
+		  <div class="panel-body">
+			במקטע השתתפו <b>{{section.participants}}</b> והלכו {{section.length}} ק"מ
+			({{section.lengthPercent}} משביל ישראל).
+			המרחק המצטבר שעברנו בשביל ישראל במקטע זה  הוא {{section.lengthSum}} ק"מ
+			({{section.lengthSumPercent}} מהשביל).
+			<span ng-show="{{section.partParticipants != ''}}">
+			יש לציין כי <b>{{section.partParticipants}}</b> השתתפו רק בחלק מהשביל.
+		    </span>
+		  </div>
+		</div>
 
