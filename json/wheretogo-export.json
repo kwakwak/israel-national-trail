@@ -1,0 +1,443 @@
+{
+  "israel-national-trail" : [ {
+    "participants" : "איתי,אלון זיו,לב",
+    "lengthSumPercent" : "1.40%",
+    "lengthPercent" : "1.40%",
+    "length" : 13.5,
+    "section" : 1,
+    "lengthSum" : 13.5,
+    "partParticipants" : "",
+	"startLocation" : "תל דן",
+	"endLocation" : "תל חי"
+  }, {
+    "participants" : "איתי,אלון זיו,לב",
+    "lengthSumPercent" : "3.26%",
+    "lengthPercent" : "1.86%",
+    "length" : 18,
+    "section" : 2,
+    "lengthSum" : 31.5,
+    "partParticipants" : "",
+	"startLocation" : "תל חי",
+	"endLocation" : "מצודת ישע"
+  }, {
+    "participants" : "איתי,אלון זיו,נטע,אסיה,רוני",
+    "lengthSumPercent" : "5.32%",
+    "lengthPercent" : "2.07%",
+    "length" : 20,
+    "section" : 3,
+    "lengthSum" : 51.5,
+    "partParticipants" : "",
+	"startLocation" : "מצודת ישע",
+	"endLocation" : "נחל דישון"
+  }, {
+    "participants" : "איתי,אלון זיו,רוני",
+    "lengthSumPercent" : "6.87%",
+    "lengthPercent" : "1.55%",
+    "length" : 15,
+    "section" : 4,
+    "lengthSum" : 66.5,
+    "partParticipants" : "",
+	"startLocation" : "נחל דישון",
+	"endLocation" : "הר מירון"
+  }, {
+    "participants" : "איתי,אלון זיו,רוני",
+    "lengthSumPercent" : "7.55%",
+    "lengthPercent" : "0.67%",
+    "length" : 6.5,
+    "section" : 5,
+    "lengthSum" : 73,
+    "partParticipants" : "",
+	"startLocation" : "הר מירון",
+	"endLocation" : "נחל מירון"
+  }, {
+    "participants" : "איתי,אלון זיו,רוני",
+    "lengthSumPercent" : "9.35%",
+    "lengthPercent" : "1.81%",
+    "length" : 17.5,
+    "section" : 6,
+    "lengthSum" : 90.5,
+    "partParticipants" : "",
+	"startLocation" : "נחל מירון",
+	"endLocation" : "נחל עמוד עליון"
+  }, {
+    "participants" : "איתי,אלון זיו",
+    "lengthSumPercent" : "10.96%",
+    "lengthPercent" : "1.60%",
+    "length" : 15.5,
+    "section" : 7,
+    "lengthSum" : 106,
+    "partParticipants" : "אסיה,נטע,רוני",
+	"startLocation" : "נחל עמוד עליון",
+	"endLocation" : "טבריה עילית"
+  }, {
+    "participants" : "איתי,אלון זיו,נטע,אסיה",
+    "lengthSumPercent" : "12.35%",
+    "lengthPercent" : "1.40%",
+    "length" : 13.5,
+    "section" : 8,
+    "lengthSum" : 119.5,
+    "partParticipants" : "",
+	"startLocation" : "טבריה עילית",
+	"endLocation" : "אתר ירדנית"
+  }, {
+    "participants" : "איתי,אלון זיו,נטע,אסיה",
+    "lengthSumPercent" : "15.09%",
+    "lengthPercent" : "2.74%",
+    "length" : 26.5,
+    "section" : 9,
+    "lengthSum" : 146,
+    "partParticipants" : "",
+	"startLocation" : "אתר ירדנית",
+	"endLocation" : "תבור"
+  }, {
+    "participants" : "אורי,אורית,איתי,אלה,אלון זיו,אסיה,לב,רוני",
+    "lengthSumPercent" : "17.16%",
+    "lengthPercent" : "2.07%",
+    "length" : 20,
+    "section" : 10,
+    "lengthSum" : 166,
+    "partParticipants" : "",
+	"startLocation" : "תבור",
+	"endLocation" : "משהד"
+  }, {
+    "participants" : "איתי,אלה,אלון זיו,אלון שומרון,אנה,אסיה,דינה",
+    "lengthSumPercent" : "18.29%",
+    "lengthPercent" : "1.14%",
+    "length" : 11,
+    "section" : 11,
+    "lengthSum" : 177,
+    "partParticipants" : "",
+	"startLocation" : "משהד",
+	"endLocation" : "צומת יפתחאל"
+  }, {
+    "participants" : "איתי,אלה,אלון זיו,אלון שומרון,אנה,אסיה,דינה",
+    "lengthSumPercent" : "20.78%",
+    "lengthPercent" : "2.48%",
+    "length" : 24,
+    "section" : 12,
+    "lengthSum" : 201,
+    "partParticipants" : "",
+	"startLocation" : "צומת יפתחאל",
+	"endLocation" : "קיבוץ יגור"
+  }, {
+    "participants" : "אורית,איתי,אלה,אלון זיו,אסיה,לב,רוני",
+    "lengthSumPercent" : "22.64%",
+    "lengthPercent" : "1.86%",
+    "length" : 18,
+    "section" : 13,
+    "lengthSum" : 219,
+    "partParticipants" : "",
+	"startLocation" : "קיבוץ יגור",
+	"endLocation" : "צומת אורן"
+  }, {
+    "participants" : "אורית,איתי,אלה,אלון זיו,אסיה,לב,רוני",
+    "lengthSumPercent" : "24.91%",
+    "lengthPercent" : "2.27%",
+    "length" : 22,
+    "section" : 14,
+    "lengthSum" : 241,
+    "partParticipants" : "",
+	"startLocation" : "צומת אורן",
+	"endLocation" : "הר חורשן"
+  }, {
+    "participants" : "אורית,איתי,אלה,אלון זיו,דינה,נטע,פוגי,רוני",
+    "lengthSumPercent" : "26.56%",
+    "lengthPercent" : "1.65%",
+    "length" : 16,
+    "section" : 15,
+    "lengthSum" : 257,
+    "partParticipants" : "",
+	"startLocation" : "הר חורשן",
+	"endLocation" : "ג'יסר א-זרקא"
+  }, {
+    "participants" : "אורית,איתי,אלה,אלון זיו,דינה,נטע,פוגי,רוני",
+    "lengthSumPercent" : "28.22%",
+    "lengthPercent" : "1.65%",
+    "length" : 16,
+    "section" : 16,
+    "lengthSum" : 273,
+    "partParticipants" : "",
+	"startLocation" : "ג'יסר א-זרקא",
+	"endLocation" : "תחנת הרכבת בחדרה"
+  }, {
+    "participants" : "איתי,אלה,אלון זיו,אסיה,דינה",
+    "lengthSumPercent" : "30.70%",
+    "lengthPercent" : "2.48%",
+    "length" : 24,
+    "section" : 17,
+    "lengthSum" : 297,
+    "partParticipants" : "אורית,רוני,נטע,סיון,רוני",
+	"startLocation" : "תחנת הרכבת בחדרה",
+	"endLocation" : "חוף הירוק"
+  }, {
+    "participants" : "אורית,איתי,אלה,אלון זיו,אסיה,דינה,נטע,סיון,פוגי",
+    "lengthSumPercent" : "32.97%",
+    "lengthPercent" : "2.27%",
+    "length" : 22,
+    "section" : 18,
+    "lengthSum" : 319,
+    "partParticipants" : "",
+	"startLocation" : "חוף הירוק",
+	"endLocation" : "תל אביב"
+  }, {
+    "participants" : "אורי,איתי,אלה,אלון זיו,אלון שומרון,אסיה,דוד,דינה,לב,נטע,סיון,פוגי,רוני,פולינה",
+    "lengthSumPercent" : "35.66%",
+    "lengthPercent" : "2.69%",
+    "length" : 26,
+    "section" : 19,
+    "lengthSum" : 345,
+    "partParticipants" : "",
+	"startLocation" : "תל אביב",
+	"endLocation" : "מקורות הירקון"
+  }, {
+    "participants" : "איתי,אלה,דורון,לב",
+    "lengthSumPercent" : "38.14%",
+    "lengthPercent" : "2.48%",
+    "length" : 24,
+    "section" : 20,
+    "lengthSum" : 369,
+    "partParticipants" : "אורי,אלון זיו,אלון שומרון,אסיה,דוד,דינה,נטע,סיון,פוגי,פולינה,רוני",
+	"startLocation" : "מקורות הירקון",
+	"endLocation" : "מצפה מודיעים"
+  }, {
+    "participants" : "איתי,אלה,דורון,לב",
+    "lengthSumPercent" : "40.00%",
+    "lengthPercent" : "1.86%",
+    "length" : 18,
+    "section" : 21,
+    "lengthSum" : 387,
+    "partParticipants" : "",
+	"startLocation" : "מצפה מודיעים",
+	"endLocation" : "משטרת לטרון"
+  }, {
+    "participants" : "איתי,אלה,אלון זיו,גארפילד,דורון,לב,רוני",
+    "lengthSumPercent" : "41.03%",
+    "lengthPercent" : "1.03%",
+    "length" : 10,
+    "section" : 22,
+    "lengthSum" : 397,
+    "partParticipants" : "",
+	"startLocation" : "משטרת לטרון",
+	"endLocation" : "שער הגיא"
+  }, {
+    "participants" : "איתי,אלה,אלון זיו,גארפילד,דורון,לב,רוני",
+    "lengthSumPercent" : "42.89%",
+    "lengthPercent" : "1.86%",
+    "length" : 18,
+    "section" : 23,
+    "lengthSum" : 415,
+    "partParticipants" : "",
+	"startLocation" : "שער הגיא",
+	"endLocation" : "קיבוץ צובה"
+  }, {
+    "participants" : "איתי,אלה,אסיה,גארפילד,דוד,דורון,דינה",
+    "lengthSumPercent" : "45.27%",
+    "lengthPercent" : "2.38%",
+    "length" : 23,
+    "section" : 24,
+    "lengthSum" : 438,
+    "partParticipants" : "אלון זיו,לב,לילך,עומר,רוני,ריאן",
+	"startLocation" : "קיבוץ צובה",
+	"endLocation" : "חורבת חנות"
+  }, {
+    "participants" : "איתי,אלה,אלון זיו,אסיה,גארפילד,דורון,דינה,לב,לילך,עומר,רוני,ריאן",
+    "lengthSumPercent" : "47.34%",
+    "lengthPercent" : "2.07%",
+    "length" : 20,
+    "section" : 25,
+    "lengthSum" : 458,
+    "partParticipants" : "",
+	"startLocation" : "חורבת חנות",
+	"endLocation" : "מצפה משואה"
+  }, {
+    "participants" : "איתי,אלה,אסיה,גארפילד,דינה,ריאן,רון",
+    "lengthSumPercent" : "48.37%",
+    "lengthPercent" : "1.03%",
+    "length" : 10,
+    "section" : 26,
+    "lengthSum" : 468,
+    "partParticipants" : "",
+	"startLocation" : "מצפה משואה",
+	"endLocation" : "בית גוברין"
+  }, {
+    "participants" : "איתי,אלה,אסיה,גארפילד,דינה,ריאן,רון",
+    "lengthSumPercent" : "50.59%",
+    "lengthPercent" : "2.22%",
+    "length" : 21.5,
+    "section" : 27,
+    "lengthSum" : 489.5,
+    "partParticipants" : "רוני,פולינה",
+	"startLocation" : "בית גוברין",
+	"endLocation" : "תל קשת"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "52.76%",
+    "lengthPercent" : "2.17%",
+    "length" : 21,
+    "section" : 28,
+    "lengthSum" : 510.5,
+    "partParticipants" : "",
+	"startLocation" : "תל קשת",
+	"endLocation" : "צומת דביר"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "55.04%",
+    "lengthPercent" : "2.27%",
+    "length" : 22,
+    "section" : 29,
+    "lengthSum" : 532.5,
+    "partParticipants" : "",
+	"startLocation" : "צומת דביר",
+	"endLocation" : "צומת שוקת"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "57.42%",
+    "lengthPercent" : "2.38%",
+    "length" : 23,
+    "section" : 30,
+    "lengthSum" : 555.5,
+    "partParticipants" : "",
+	"startLocation" : "צומת שוקת",
+	"endLocation" : "הר עמשא"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "58.97%",
+    "lengthPercent" : "1.55%",
+    "length" : 15,
+    "section" : 31,
+    "lengthSum" : 570.5,
+    "partParticipants" : "",
+	"startLocation" : "הר עמשא",
+	"endLocation" : "פארק ערד"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "63.41%",
+    "lengthPercent" : "4.44%",
+    "length" : 43,
+    "section" : 32,
+    "lengthSum" : 613.5,
+    "partParticipants" : "",
+	"startLocation" : "פארק ערד",
+	"endLocation" : "מצד תמר"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "66.51%",
+    "lengthPercent" : "3.10%",
+    "length" : 30,
+    "section" : 33,
+    "lengthSum" : 643.5,
+    "partParticipants" : "",
+	"startLocation" : "מצד תמר",
+	"endLocation" : "מכתש הגדול"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "69.92%",
+    "lengthPercent" : "3.41%",
+    "length" : 33,
+    "section" : 34,
+    "lengthSum" : 676.5,
+    "partParticipants" : "",
+	"startLocation" : "מכתש הגדול",
+	"endLocation" : "מעלה צין"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "71.16%",
+    "lengthPercent" : "1.24%",
+    "length" : 12,
+    "section" : 35,
+    "lengthSum" : 688.5,
+    "partParticipants" : "",
+	"startLocation" : "מעלה צין",
+	"endLocation" : "עין שביב"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "74.78%",
+    "lengthPercent" : "3.62%",
+    "length" : 35,
+    "section" : 36,
+    "lengthSum" : 723.5,
+    "partParticipants" : "",
+	"startLocation" : "עין שביב",
+	"endLocation" : "מצפה רמון"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "77.05%",
+    "lengthPercent" : "2.27%",
+    "length" : 22,
+    "section" : 37,
+    "lengthSum" : 745.5,
+    "partParticipants" : "",
+	"startLocation" : "מצפה רמון",
+	"endLocation" : "הר סהרונים"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "80.98%",
+    "lengthPercent" : "3.93%",
+    "length" : 38,
+    "section" : 38,
+    "lengthSum" : 783.5,
+    "partParticipants" : "",
+	"startLocation" : "הר סהרונים",
+	"endLocation" : "ערבה"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "89.97%",
+    "lengthPercent" : "8.99%",
+    "length" : 87,
+    "section" : 39,
+    "lengthSum" : 870.5,
+    "partParticipants" : "",
+	"startLocation" : "ערבה",
+	"endLocation" : "שיזפון"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "94.83%",
+    "lengthPercent" : "4.86%",
+    "length" : 47,
+    "section" : 40,
+    "lengthSum" : 917.5,
+    "partParticipants" : "",
+	"startLocation" : "שיזפון",
+	"endLocation" : "פארק תמנע"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "96.07%",
+    "lengthPercent" : "1.24%",
+    "length" : 12,
+    "section" : 41,
+    "lengthSum" : 929.5,
+    "partParticipants" : "",
+	"startLocation" : "פארק תמנע",
+	"endLocation" : "באר אורה"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "97.62%",
+    "lengthPercent" : "1.55%",
+    "length" : 15,
+    "section" : 42,
+    "lengthSum" : 944.5,
+    "partParticipants" : "",
+	"startLocation" : "באר אורה",
+	"endLocation" : "קניון שחורת"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "98.66%",
+    "lengthPercent" : "1.03%",
+    "length" : 10,
+    "section" : 43,
+    "lengthSum" : 954.5,
+    "partParticipants" : "",
+	"startLocation" : "קניון שחורת",
+	"endLocation" : "עין נטפים"
+  }, {
+    "participants" : "",
+    "lengthSumPercent" : "100.00%",
+    "lengthPercent" : "1.34%",
+    "length" : 13,
+    "section" : 44,
+    "lengthSum" : 967.5,
+    "partParticipants" : "",
+	"startLocation" : "הר יואש",
+	"endLocation" : "אילת"
+  } ]
+}
