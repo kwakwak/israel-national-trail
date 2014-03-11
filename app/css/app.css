@@ -1,4 +1,7 @@
-body {direction: rtl; margin:20px;}
+html {overflow-y:scroll;}
+body {
+	direction: rtl; margin:20px;
+}
 
 .panel {
 	width: 300px;
@@ -15,4 +18,11 @@ input.search{
 	font-weight: bold;
 	font-size: 15px;
 	text-align: center;
+}
+
+img.logo {
+	position: absolute;
+	left: 40px;
+	top: 20px;
+	border: 1px solid lightgray;
 }

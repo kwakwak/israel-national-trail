@@ -10,12 +10,11 @@ angular.module('myApp.controllers', [])
         $scope.$watch('search.participants', function(newVal, oldVal, scope) {
           setTimeout(function() { // wait for filteredSection update
             if (newVal !== oldVal) {  
-             var statLength = parseInt(0);
-             var statLengthPercent = parseInt(0);
+             var statLength = 0;
+             var statLengthPercent = 0;
              angular.forEach($scope.filteredSection, function(value, key){
-               statLength+= parseInt(value.length);
-
-               statLengthPercent+= parseInt(value.lengthPercent);
+               statLength+= parseFloat(value.length);
+               statLengthPercent+= parseFloat(value.lengthPercent);
              });
               $scope.stat=
               {
