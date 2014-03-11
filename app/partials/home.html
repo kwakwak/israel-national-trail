@@ -1,8 +1,9 @@
 
-		<span style="font-size: 50px;font-weight: bold;">שביל ישראל</span>
-		<input style="width: 250px;" ng-model="search" class="form-control" placeholder="משתמשים,סטטיסטיקות,מרחקים,אחוזים">
+		<h1>שביל ישראל</h1>
 		<hr>
-		<p ng-show="stat.show">בחיפוש הנוכחי עברו מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</p>
+		<input class="search" ng-model="search.participants"  
+		placeholder="שם משתתף">
+		<span ng-show="stat.show"> עבר\ה מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
 		<hr>
 		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | filter:search))">
 		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>

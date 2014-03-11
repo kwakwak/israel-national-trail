@@ -7,22 +7,26 @@ angular.module('myApp.controllers', [])
 
         $scope.sections = syncData('israel-national-trail');
         
-        $scope.$watch('search', function(newVal, oldVal, scope) {
-          if (newVal !== oldVal) {
-           var statLength = parseInt(0);
-           var statLengthPercent = parseInt(0);
-           angular.forEach($scope.filteredSection, function(value, key){
-             statLength+= parseInt(value.length);
-             statLengthPercent+= parseInt(value.lengthPercent);
-           });
-            $scope.stat=
-            {
-              length:statLength,
-              lengthPercent:statLengthPercent,
-              show:true
-            };
-          };
-          if (newVal=="") $scope.stat.show=false;
+        $scope.$watch('search.participants', function(newVal, oldVal, scope) {
+          setTimeout(function() { // wait for filteredSection update
+            if (newVal !== oldVal) {  
+             var statLength = parseInt(0);
+             var statLengthPercent = parseInt(0);
+             angular.forEach($scope.filteredSection, function(value, key){
+               statLength+= parseInt(value.length);
+
+               statLengthPercent+= parseInt(value.lengthPercent);
+             });
+              $scope.stat=
+              {
+                length:statLength,
+                lengthPercent:statLengthPercent,
+                show:true
+              };
+              if (newVal=="" || $scope.stat.length==0) $scope.stat.show=false;
+              $scope.$apply();
+            };         
+          }, 1);
         });
 
  
