@@ -17,14 +17,12 @@ input.search{
 	width: 90px;
 	font-weight: bold;
 	font-size: 15px;
-	text-align: center;
+	padding-right: 2px;
 	display: inline-block;
 }
 
 img.logo {
-	position: absolute;
-	left: 20px;
-	top: 23px;
+
 	border: 1px solid lightgray;
 }
 span.stat{
@@ -35,3 +33,7 @@ span.stat{
 hr{
 	margin-top: 15px;
 }
+ul.dropdown-menu{
+	margin: 2px -70px 0
+}
+

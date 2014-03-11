@@ -7,7 +7,27 @@ angular.module('myApp.controllers', [])
 
         $scope.sections = syncData('israel-national-trail');
         
-        $scope.$watch('search.participants', function(newVal, oldVal, scope) {
+        $scope.sections.$on("loaded", function() {
+
+          function arrayUnique(array) {
+              var a = array.concat();
+              for(var i=0; i<a.length; ++i) {
+                  for(var j=i+1; j<a.length; ++j) {
+                      if(a[i] === a[j])
+                          a.splice(j--, 1);
+                  }
+              }
+              return a;
+          };
+
+          $scope.participants =[];
+          angular.forEach($scope.sections, function(value, key){
+            if (value.participants) $scope.participants=arrayUnique($scope.participants.concat(value.participants.split(","))) ; 
+          });
+        });
+
+        
+        $scope.$watch('search', function(newVal, oldVal, scope) {
           setTimeout(function() { // wait for filteredSection update
             if (newVal !== oldVal) {  
              var statLength = 0;
@@ -27,6 +47,12 @@ angular.module('myApp.controllers', [])
             };         
           }, 1);
         });
+
+
+
+
+
+
 
  
    }])

@@ -1,12 +1,15 @@
 
 		<h1>שביל ישראל</h1>
-		<img class="logo" src="img/logo.png">
+	
+				<input class="search" ng-model="search"  
+		placeholder="שם משתתף" typeahead="participant for participant in participants | filter:$viewValue | limitTo:4">
 		<hr>
-		<input class="search" ng-model="search.participants"  
-		placeholder="שם משתתף">
-		<span class="stat" ng-show="stat.show"> עבר\ה מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
-		<p><p/>
-		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | filter:search))">
+		<div ng-show="stat.show">
+			<h2 >המקטעים של {{search}}</h2>
+			<span>מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
+		</div>
+		<h2 ng-hide="stat.show"> המקטעים שעברנו </h2>
+		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | participants:search))">
 		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>
 		  <div class="panel-body">
 			במקטע השתתפו <b>{{section.participants}}</b> והלכו {{section.length}} ק"מ
