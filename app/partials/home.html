@@ -15,12 +15,12 @@
 		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | participants:search))">
 		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>
 		  <div class="panel-body">
-			במקטע השתתפו <b>{{section.participants}}</b> והלכו {{section.length}} ק"מ
-			({{section.lengthPercent}} משביל ישראל).
-			המרחק המצטבר שעברנו בשביל ישראל במקטע זה  הוא {{section.lengthSum}} ק"מ
-			({{section.lengthSumPercent}} מהשביל).
+			<b>משתתפים </b>{{section.participants}}. <br/>
+			<b>מרחק המקטע </b>{{section.length}} ק"מ  ({{section.lengthPercent}}). <br/>
+			<b>מרחק מצטבר </b>{{section.lengthSum}} ק"מ ({{section.lengthSumPercent}}). <br/>
+			
 			<span ng-show="{{section.partParticipants != ''}}">
-			יש לציין כי <b>{{section.partParticipants}}</b> השתתפו רק בחלק מהשביל.
+			<b>היו בחלק מהקטע </b>{{section.partParticipants}}.
 		    </span>
 		  </div>
 		</div>
