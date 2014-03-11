@@ -9,10 +9,6 @@ angular.module('myApp.filters', [])
         for (k in list) if (list[k].participants) out.push(list[k]);
         return out;
       };
-    })
-   .filter('part', function() {  // clean items without paticipants.
-      return function(list) {
-        console.dir (list);
-        return list;
-      };
+
+
    });

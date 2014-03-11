@@ -4,8 +4,8 @@
 		<hr>
 		<input class="search" ng-model="search.participants"  
 		placeholder="שם משתתף">
-		<span ng-show="stat.show"> עבר\ה מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
-		<hr>
+		<span class="stat" ng-show="stat.show"> עבר\ה מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
+		<p><p/>
 		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | filter:search))">
 		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>
 		  <div class="panel-body">

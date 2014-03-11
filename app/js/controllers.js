@@ -18,8 +18,8 @@ angular.module('myApp.controllers', [])
              });
               $scope.stat=
               {
-                length:statLength,
-                lengthPercent:statLengthPercent,
+                length:statLength.toFixed(2),
+                lengthPercent:statLengthPercent.toFixed(2),
                 show:true
               };
               if (newVal=="" || $scope.stat.length==0) $scope.stat.show=false;
