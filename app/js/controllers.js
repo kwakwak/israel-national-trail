@@ -8,7 +8,7 @@ angular.module('myApp.controllers', [])
         $scope.sections = syncData('israel-national-trail');
         
         $scope.sections.$on("loaded", function() {
-
+          $scope.loaded=true;
           function arrayUnique(array) {
               var a = array.concat();
               for(var i=0; i<a.length; ++i) {

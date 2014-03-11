@@ -14,10 +14,10 @@ body {
 .panel:nth-child(odd) {background:#F3F9FF;}
 
 input.search{
-	width: 90px;
+	width: 140px;
 	font-weight: bold;
 	font-size: 15px;
-	padding-right: 2px;
+	padding-right: 6px;
 	display: inline-block;
 }
 
@@ -34,6 +34,6 @@ hr{
 	margin-top: 15px;
 }
 ul.dropdown-menu{
-	margin: 2px -70px 0
+	margin: 2px -20px 0
 }
 

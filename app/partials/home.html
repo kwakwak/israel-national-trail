@@ -4,11 +4,14 @@
 				<input class="search" ng-model="search"  
 		placeholder="שם משתתף" typeahead="participant for participant in participants | filter:$viewValue | limitTo:4">
 		<hr>
-		<div ng-show="stat.show">
+		<div ng-show="stat.show" style="margin-bottom: 15px;">
 			<h2 >המקטעים של {{search}}</h2>
-			<span>מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
+			<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
 		</div>
 		<h2 ng-hide="stat.show"> המקטעים שעברנו </h2>
+
+		<p ng-show="stat.length==0">המשתתף לא נמצא.</p>
+		<p ng-hide="loaded"> טוען נתונים...  </p>
 		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | participants:search))">
 		  <div class="panel-heading"><b>מקטע מספר {{section.section}} </b></div>
 		  <div class="panel-body">
