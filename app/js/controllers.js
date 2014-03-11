@@ -6,14 +6,23 @@ angular.module('myApp.controllers', [])
    .controller('HomeCtrl', ['$scope', 'syncData','$routeParams','$log','$location', function($scope, syncData,$routeParams,$log,$location) {
 
         $scope.sections = syncData('israel-national-trail');
-        $scope.sections.$on('loaded', function()
-        {
-          $log.info("Loaded");
-          $scope.$watch('filteredSection', function(body) {
-            if (body) {
-              $scope.previewText = body;
-            }
-          });
+        
+        $scope.$watch('search', function(newVal, oldVal, scope) {
+          if (newVal !== oldVal) {
+           var statLength = parseInt(0);
+           var statLengthPercent = parseInt(0);
+           angular.forEach($scope.filteredSection, function(value, key){
+             statLength+= parseInt(value.length);
+             statLengthPercent+= parseInt(value.lengthPercent);
+           });
+            $scope.stat=
+            {
+              length:statLength,
+              lengthPercent:statLengthPercent,
+              show:true
+            };
+          };
+          if (newVal=="") $scope.stat.show=false;
         });
 
  
