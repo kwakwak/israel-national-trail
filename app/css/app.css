@@ -1,6 +1,6 @@
 html {overflow-y:scroll;}
 body {
-	direction: rtl; margin:20px;
+	direction: rtl; margin: 10px 70px;;
 }
 
 .panel {
@@ -41,6 +41,7 @@ ul.dropdown-menu{
 }
 table{
 	width: 100%;
+	margin-top: 11px;
 }
 .progress{
 	margin-bottom: 5px;

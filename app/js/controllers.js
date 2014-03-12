@@ -20,7 +20,7 @@ angular.module('myApp.controllers', [])
 
               });
           });
-
+          $scope.participantsObj = participants;
           var participantsArr =[];
           angular.forEach(participants, function(value, key){
                 var  partObj = {
@@ -36,24 +36,21 @@ angular.module('myApp.controllers', [])
 
         
         $scope.$watch('search', function(newVal, oldVal, scope) {
-          setTimeout(function() { // wait for filteredSection update
-            if (newVal !== oldVal) {  
-             var statLength = 0;
-             var statLengthPercent = 0;
-             angular.forEach($scope.filteredSection, function(value, key){
-               statLength+= parseFloat(value.length);
-               statLengthPercent+= parseFloat(value.lengthPercent);
-             });
-              $scope.stat=
-              {
-                length:statLength.toFixed(2),
-                lengthPercent:statLengthPercent.toFixed(2),
-                show:true
-              };
-              if (newVal=="" || $scope.stat.length==0) $scope.stat.show=false;
-              $scope.$apply();
+            
+            if (newVal !== oldVal) {
+              $scope.stat={};
+              if (newVal) $scope.stat={"search": true};
+              else   scope.stat={"search": false};
+              if ($scope.participantsObj[newVal]){
+                $scope.stat=
+                {
+                  length:$scope.participantsObj[newVal].length,
+                  lengthPercent:$scope.participantsObj[newVal].lengthPercent.toFixed(0),
+                  show:true
+                };
+              }else $scope.stat.show=false;
             };         
-          }, 1);
+      
         });
  
    }])
