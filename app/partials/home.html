@@ -1,55 +1,44 @@
-
-		<h1>שביל ישראל</h1>
-
-						<input class="search" ng-model="search"  
-		placeholder="חיפוש משתתפים" typeahead="participant.name for participant in participants | filter:$viewValue | limitTo:4">
-		<img src="img/logo.png" class="logo">
+<h1>שביל ישראל</h1>
+<input class="search" ng-model="search"  
+placeholder="חיפוש משתתפים" typeahead="participant.name for participant in participants | filter:$viewValue | limitTo:4">
+<img src="img/logo.png" class="logo">
 <hr>
-
-
-		<div ng-show="stat.show" style="margin-bottom: 15px;">
-			<h2 >המקטעים של {{search}}</h2>
-			<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
-		</div>
-		<h2 ng-hide="stat.show || stat.search "> כל המקטעים </h2>
-
-		<h2 ng-show="!stat.show && stat.search">המשתתף לא נמצא.</h2>
-
-
-		<p ng-hide="loaded"> טוען נתונים...  </p>
-
-
+<div ng-show="stat.show" style="margin-bottom: 15px;">
+	<h2 >המקטעים של {{search}}</h2>
+	<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
+</div>
+<h2 ng-hide="stat.show || stat.search "> כל המקטעים </h2>
+<h2 ng-show="!stat.show && stat.search">המשתתף לא נמצא.</h2>
+<p ng-hide="loaded"> טוען נתונים...  </p>
 <div class="row">
 	<div class="col-xs-4">
 		<table class="table-striped">
-			<tr ng-repeat="(key,participant) in participants  | orderBy:'length':true"><td><strong> {{participant.name}}</strong></td><td>{{participant.length}} ק"מ</td>
-			<td style="width: 40%;">
-				<div class="progress">
-				  <div class="progress-bar" role="progressbar" aria-valuenow="{{participant.lengthPercent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{participant.lengthPercent}}%;">
-				    {{participant.lengthPercent}}%
-				  </div>
-				</div>
-			</td>
+			<tr ng-repeat="(key,participant) in participants  | orderBy:'length':true">
+				<td><strong><a href="" ng-click="searchFor(participant.name)"> {{participant.name}}</a></strong></td>
+				<td>{{participant.length}} ק"מ</td>
+				<td style="width: 40%;">
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="{{participant.lengthPercent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{participant.lengthPercent}}%;">
+						</div>
+					</div>
+				</td>
 			</tr>
-		</table>
+		</table><br/>
+		<small ng-show="loaded" ng-cloak>{{participants.length}} משתתפים</small>
 	</div>
 	<div class="col-xs-8">
-
 		<div class="panel" ng-class="{'panel-success':section.participants != '','panel-danger':section.participants == ''}" ng-repeat="section in sections | clean | participants:search">
-		  <div class="panel-heading"><b><span class="lead">{{section.section}}.</span> מ{{section.startLocation}} ל{{section.endLocation}}</b></div>
-		  <div class="panel-body">
-		  	<span ng-show="{{section.participants != ''}}">
-			<b>משתתפים </b>{{section.participants}}. <br/>
-			</span>
-
-			<b>מרחק המקטע </b>{{section.length}} ק"מ  ({{section.lengthPercent}}). <br/>
-			<b>מרחק מצטבר </b>{{section.lengthSum}} ק"מ ({{section.lengthSumPercent}}). <br/>
-			
-			<span ng-show="{{section.partParticipants != ''}}">
-			<b>היו בחלק מהקטע </b>{{section.partParticipants}}.
-		    </span>
-		  </div>
+			<div class="panel-heading"><b><span class="lead">{{section.section}}.</span> מ{{section.startLocation}} ל{{section.endLocation}}</b></div>
+			<div class="panel-body">
+				<span ng-show="{{section.participants != ''}}">
+					<b>משתתפים </b>{{section.participants}}. <br/>
+				</span>
+				<b>מרחק המקטע </b>{{section.length}} ק"מ  ({{section.lengthPercent}}). <br/>
+				<b>מרחק מצטבר </b>{{section.lengthSum}} ק"מ ({{section.lengthSumPercent}}). <br/>
+				<span ng-show="{{section.partParticipants != ''}}">
+					<b>היו בחלק מהקטע </b>{{section.partParticipants}}.
+				</span>
+			</div>
 		</div>
-
-</div>
+	</div>
 </div>

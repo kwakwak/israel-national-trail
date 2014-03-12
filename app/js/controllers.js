@@ -33,7 +33,7 @@ angular.module('myApp.controllers', [])
           $scope.participants =participantsArr;
 
         });
-
+        
         
         $scope.$watch('search', function(newVal, oldVal, scope) {
             
@@ -52,7 +52,10 @@ angular.module('myApp.controllers', [])
             };         
       
         });
- 
+        
+        $scope.searchFor = function(name){
+          $scope.search = name;
+        };
    }])
   .controller('ChatCtrl', ['$scope', 'syncData', function($scope, syncData) {
       $scope.newMessage = null;
