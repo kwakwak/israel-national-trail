@@ -1,4 +1,4 @@
-<h1>שביל ישראל</h1>
+<h1>איתי וחברים בשביל ישראל</h1>
 <input class="search" ng-model="search"  
 placeholder="חיפוש שביליסט" typeahead="participant.name for participant in participants | filter:$viewValue | limitTo:4">
 <img src="img/logo.png" class="logo"><br/>
@@ -6,7 +6,7 @@ placeholder="חיפוש שביליסט" typeahead="participant.name for particip
 <hr>
 <div ng-show="stat.show" style="margin-bottom: 15px;">
 	<h2 >המקטעים של {{search}}</h2>
-	<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל), ללא מקטעים חלקיים.</span><br/>
+	<span>עם מרחק מצטבר של {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל), ללא מקטעים חלקיים.</span><br/>
 	<a href=""  ng-click="searchFor('')"><small>חזרה לכל המקטעים</small>  </a>
 </div>
 
