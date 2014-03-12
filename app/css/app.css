@@ -36,4 +36,11 @@ hr{
 ul.dropdown-menu{
 	margin: 2px -20px 0
 }
+table{
+	width: 30%;
+}
+.progress{
+	margin-bottom: 5px;
+	margin-top: 5px;
+}
 

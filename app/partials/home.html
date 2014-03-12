@@ -1,7 +1,19 @@
 
 		<h1>שביל ישראל</h1>
 
-		<p ng-repeat="part in top10">aa{{part}}</p>
+		<table class="table-striped">
+			<tr ng-repeat="(key,participant) in participants  | orderBy:'length':true"><td><strong>{{key+1}}. {{participant.name}}</strong></td><td>{{participant.length}} ק"מ</td>
+<td style="width: 40%;">
+<div class="progress">
+  <div class="progress-bar" role="progressbar" aria-valuenow="{{participant.lengthPercent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{participant.lengthPercent}}%;">
+    {{participant.lengthPercent}}%
+  </div>
+</div>
+
+</td>
+
+			</tr>
+		</table>
 	
 				<input class="search" ng-model="search"  
 		placeholder="שם משתתף" typeahead="participant for participant in participants | filter:$viewValue | limitTo:4">

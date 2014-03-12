@@ -10,16 +10,27 @@ angular.module('myApp.controllers', [])
         $scope.sections.$on("loaded", function() {
           $scope.loaded=true;
 
-          var participants =[];
+          var participants ={};
           angular.forEach($scope.sections, function(list){
             if (list.participants) 
               angular.forEach(list.participants.split(","), function(part){
-                if (isNaN(participants[part])) participants[part]=0; 
-                participants[part] += list.length;
+                if (!participants[part]) participants[part]={length:0,lengthPercent:0}; 
+                participants[part].length += parseFloat(list.length);
+                participants[part].lengthPercent +=  parseFloat(list.lengthPercent);
+
               });
           });
-          $log.info (participants);
-          $scope.top10 =participants;
+
+          var participantsArr =[];
+          angular.forEach(participants, function(value, key){
+                var  partObj = {
+                  "name" : key,
+                  "length" : value.length,
+                  "lengthPercent" : value.lengthPercent.toFixed(0)
+                }
+                 this.push(partObj);
+               }, participantsArr);
+          $scope.participants =participantsArr;
 
         });
 
