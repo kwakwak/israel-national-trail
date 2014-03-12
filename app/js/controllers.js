@@ -10,7 +10,7 @@ angular.module('myApp.controllers', [])
         $scope.sections.$on("loaded", function() {
           $scope.loaded=true;
 
-          var participants ={};
+          var participants ={}; // create participants object
           angular.forEach($scope.sections, function(list){
             if (list.participants) 
               angular.forEach(list.participants.split(","), function(part){
@@ -21,7 +21,8 @@ angular.module('myApp.controllers', [])
               });
           });
           $scope.participantsObj = participants;
-          var participantsArr =[];
+
+          var participantsArr =[]; // create participants array
           angular.forEach(participants, function(value, key){
                 var  partObj = {
                   "name" : key,
@@ -35,7 +36,7 @@ angular.module('myApp.controllers', [])
         });
         
         
-        $scope.$watch('search', function(newVal, oldVal, scope) {
+        $scope.$watch('search', function(newVal, oldVal, scope) { // show statistics line 
             
             if (newVal !== oldVal) {
               $scope.stat={};

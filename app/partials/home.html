@@ -1,14 +1,17 @@
 <h1>שביל ישראל</h1>
 <input class="search" ng-model="search"  
-placeholder="חיפוש משתתפים" typeahead="participant.name for participant in participants | filter:$viewValue | limitTo:4">
-<img src="img/logo.png" class="logo">
+placeholder="חיפוש שביליסט" typeahead="participant.name for participant in participants | filter:$viewValue | limitTo:4">
+<img src="img/logo.png" class="logo"><br/>
+
 <hr>
 <div ng-show="stat.show" style="margin-bottom: 15px;">
 	<h2 >המקטעים של {{search}}</h2>
-	<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>
+	<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל), ללא מקטעים חלקיים.</span><br/>
+	<a href=""  ng-click="searchFor('')"><small>חזרה לכל המקטעים</small>  </a>
 </div>
+
 <h2 ng-hide="stat.show || stat.search "> כל המקטעים </h2>
-<h2 ng-show="!stat.show && stat.search">המשתתף לא נמצא.</h2>
+<h2 ng-show="!stat.show && stat.search">השביליסט לא נמצא.</h2>
 <p ng-hide="loaded"> טוען נתונים...  </p>
 <div class="row">
 	<div class="col-xs-4">
@@ -24,10 +27,10 @@ placeholder="חיפוש משתתפים" typeahead="participant.name for particip
 				</td>
 			</tr>
 		</table><br/>
-		<small ng-show="loaded" ng-cloak>{{participants.length}} משתתפים</small>
+		
 	</div>
 	<div class="col-xs-8">
-		<div class="panel" ng-class="{'panel-success':section.participants != '','panel-danger':section.participants == ''}" ng-repeat="section in sections | clean | participants:search">
+		<div class="panel" ng-class="{'panel-success':section.participants != '' && section.part != true ,'panel-danger':section.participants == '','panel-default':section.part}" ng-repeat="section in sections | participants:search">
 			<div class="panel-heading"><b><span class="lead">{{section.section}}.</span> מ{{section.startLocation}} ל{{section.endLocation}}</b></div>
 			<div class="panel-body">
 				<span ng-show="{{section.participants != ''}}">
@@ -42,3 +45,6 @@ placeholder="חיפוש משתתפים" typeahead="participant.name for particip
 		</div>
 	</div>
 </div>
+
+        <hr>
+          נכתב ע"י <a href="mailto:ronihcohen@gmail.com">רוני הכהן</a> בעזרת <a href="http://angularjs.org/">AngularJS</a><span ng-show="loaded" ng-cloak> ובהשראת {{participants.length}} שביליסטים.</span>
