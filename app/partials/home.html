@@ -1,24 +1,10 @@
 
 		<h1>שביל ישראל</h1>
 
-		<table class="table-striped">
-			<tr ng-repeat="(key,participant) in participants  | orderBy:'length':true"><td><strong>{{key+1}}. {{participant.name}}</strong></td><td>{{participant.length}} ק"מ</td>
-<td style="width: 40%;">
-<div class="progress">
-  <div class="progress-bar" role="progressbar" aria-valuenow="{{participant.lengthPercent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{participant.lengthPercent}}%;">
-    {{participant.lengthPercent}}%
-  </div>
-</div>
-
-</td>
-
-			</tr>
-		</table>
-	
-				<input class="search" ng-model="search"  
-		placeholder="שם משתתף" typeahead="participant for participant in participants | filter:$viewValue | limitTo:4">
-		<hr>
-
+						<input class="search" ng-model="search"  
+		placeholder="חיפוש משתתפים" typeahead="participant.name for participant in participants | filter:$viewValue | limitTo:4">
+		<img src="img/logo.png" class="logo">
+<hr>
 
 
 		<div ng-show="stat.show" style="margin-bottom: 15px;">
@@ -29,6 +15,24 @@
 
 		<p ng-show="stat.length==0">המשתתף לא נמצא.</p>
 		<p ng-hide="loaded"> טוען נתונים...  </p>
+
+
+<div class="row">
+	<div class="col-xs-4">
+		<table class="table-striped">
+			<tr ng-repeat="(key,participant) in participants  | orderBy:'length':true"><td><strong> {{participant.name}}</strong></td><td>{{participant.length}} ק"מ</td>
+			<td style="width: 40%;">
+				<div class="progress">
+				  <div class="progress-bar" role="progressbar" aria-valuenow="{{participant.lengthPercent}}" aria-valuemin="0" aria-valuemax="100" style="width: {{participant.lengthPercent}}%;">
+				    {{participant.lengthPercent}}%
+				  </div>
+				</div>
+			</td>
+			</tr>
+		</table>
+	</div>
+	<div class="col-xs-8">
+
 		<div class="panel panel-default" ng-repeat="section in (filteredSection = (sections | clean | participants:search))">
 		  <div class="panel-heading"><b><span class="lead">{{section.section}}.</span> מ{{section.startLocation}} ל{{section.endLocation}}</b></div>
 		  <div class="panel-body">
@@ -42,3 +46,5 @@
 		  </div>
 		</div>
 
+</div>
+</div>

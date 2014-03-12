@@ -23,7 +23,10 @@ input.search{
 
 img.logo {
 
-	border: 1px solid lightgray;
+	border: 1px solid #eeeeee;
+	float: left;
+	position: relative;
+	bottom: 58px;
 }
 span.stat{
 	vertical-align: bottom;
@@ -37,7 +40,7 @@ ul.dropdown-menu{
 	margin: 2px -20px 0
 }
 table{
-	width: 30%;
+	width: 100%;
 }
 .progress{
 	margin-bottom: 5px;
