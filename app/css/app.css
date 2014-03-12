@@ -10,8 +10,6 @@ body {
 	margin: 15px;
 }
 
-.panel:nth-child(even) {background:#FFFAF3;}
-.panel:nth-child(odd) {background:#F3F9FF;}
 
 input.search{
 	width: 140px;
@@ -41,10 +39,11 @@ ul.dropdown-menu{
 }
 table{
 	width: 100%;
-	margin-top: 11px;
+	margin-top: 15px;
 }
 .progress{
 	margin-bottom: 5px;
 	margin-top: 5px;
 }
+
 

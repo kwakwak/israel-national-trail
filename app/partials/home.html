@@ -35,10 +35,13 @@
 	</div>
 	<div class="col-xs-8">
 
-		<div class="panel panel-default" ng-repeat="section in sections | clean | participants:search">
+		<div class="panel" ng-class="{'panel-success':section.participants != '','panel-danger':section.participants == ''}" ng-repeat="section in sections | clean | participants:search">
 		  <div class="panel-heading"><b><span class="lead">{{section.section}}.</span> מ{{section.startLocation}} ל{{section.endLocation}}</b></div>
 		  <div class="panel-body">
+		  	<span ng-show="{{section.participants != ''}}">
 			<b>משתתפים </b>{{section.participants}}. <br/>
+			</span>
+
 			<b>מרחק המקטע </b>{{section.length}} ק"מ  ({{section.lengthPercent}}). <br/>
 			<b>מרחק מצטבר </b>{{section.lengthSum}} ק"מ ({{section.lengthSumPercent}}). <br/>
 			
