@@ -1,9 +1,16 @@
 
 		<h1>שביל ישראל</h1>
+
+		<table >
+			<tr ng-repeat="(key, value) in participants"><td>a{{key}}</td> <td>b{{value}}</td></tr>
+		</table>
 	
 				<input class="search" ng-model="search"  
 		placeholder="שם משתתף" typeahead="participant for participant in participants | filter:$viewValue | limitTo:4">
 		<hr>
+
+
+
 		<div ng-show="stat.show" style="margin-bottom: 15px;">
 			<h2 >המקטעים של {{search}}</h2>
 			<span>מרחק מצטבר {{stat.length}} ק"מ  ({{stat.lengthPercent}}% משביל ישראל).</span>

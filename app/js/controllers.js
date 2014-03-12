@@ -9,21 +9,16 @@ angular.module('myApp.controllers', [])
         
         $scope.sections.$on("loaded", function() {
           $scope.loaded=true;
-          function arrayUnique(array) {
-              var a = array.concat();
-              for(var i=0; i<a.length; ++i) {
-                  for(var j=i+1; j<a.length; ++j) {
-                      if(a[i] === a[j])
-                          a.splice(j--, 1);
-                  }
-              }
-              return a;
-          };
 
           $scope.participants =[];
-          angular.forEach($scope.sections, function(value, key){
-            if (value.participants) $scope.participants=arrayUnique($scope.participants.concat(value.participants.split(","))) ; 
+          angular.forEach($scope.sections, function(list){
+            if (list.participants) 
+              angular.forEach(list.participants.split(","), function(part){
+                if (isNaN($scope.participants[part])) $scope.participants[part]=0; 
+                $scope.participants[part] += list.length;
+              });
           });
+          $log.info ($scope.participants);
         });
 
         
@@ -47,13 +42,6 @@ angular.module('myApp.controllers', [])
             };         
           }, 1);
         });
-
-
-
-
-
-
-
  
    }])
   .controller('ChatCtrl', ['$scope', 'syncData', function($scope, syncData) {
