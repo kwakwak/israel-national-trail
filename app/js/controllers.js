@@ -10,15 +10,17 @@ angular.module('myApp.controllers', [])
         $scope.sections.$on("loaded", function() {
           $scope.loaded=true;
 
-          $scope.participants =[];
+          var participants =[];
           angular.forEach($scope.sections, function(list){
             if (list.participants) 
               angular.forEach(list.participants.split(","), function(part){
-                if (isNaN($scope.participants[part])) $scope.participants[part]=0; 
-                $scope.participants[part] += list.length;
+                if (isNaN(participants[part])) participants[part]=0; 
+                participants[part] += list.length;
               });
           });
-          $log.info ($scope.participants);
+          $log.info (participants);
+          $scope.top10 =participants;
+
         });
 
         
